@@ -1,6 +1,179 @@
 <!DOCTYPE html>
-<html><body>
-<h1>Fresh Pork Meat Shop</h1>
-<p>Placeholder website with map embed and product images.</p>
-<img src="pork_curry_cut.png"/>
-</body></html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Fresh Pork Meat Shop</title>
+
+<link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap' rel='stylesheet'>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header img.logo {
+  height: 55px;
+}
+nav a {
+  margin-left: 18px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Hero */
+.hero {
+  height: 65vh;
+  background: url('https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left:0;
+  top:0;
+  background: rgba(0,0,0,0.55);
+}
+.hero-content {
+  position: relative;
+  max-width: 700px;
+}
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #e63946;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Products */
+.products {
+  padding: 50px 20px;
+  text-align: center;
+}
+.products h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 20px;
+}
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #eee;
+  padding: 30px;
+  text-align: center;
+}
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  padding: 14px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Pig_icon.png/600px-Pig_icon.png" class="logo">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Fresh Pork Delivered Daily</h1>
+    <p>Premium pork cuts: curry cut, chops, ribs, belly, boneless & more</p>
+    <a class="btn" href="#products">View Products</a>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <h2>Our Pork Cuts</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://www.fooppers.in/wp-content/uploads/2024/05/1000088218.jpg">
+      <h3>Pork Curry Cut</h3>
+    </div>
+    <div class="card">
+      <img src="https://packmymeat.com/wp-content/uploads/2022/11/20221129_144826.jpg.webp">
+      <h3>Pork Chops</h3>
+    </div>
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/71pR8Mnx%2BjL._AC_UF894%2C1000_QL80_.jpg">
+      <h3>Pork Ribs</h3>
+    </div>
+    <div class="card">
+      <img src="https://juliassimplysouthern.com/wp-content/uploads/Steps-prepping-pork-shoulder-for-stewing-remove-fat-cut-into-chunks-season-brown-in-hot-pan-Julias-Simply-Southern-1024x1024.jpg">
+      <h3>Pork Belly</h3>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>Near Fr. Muller Hospital, Kankanady, Mangalore-575002</p>
+  <p>&copy; 2025 Fresh Pork Meat Shop</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918197409509">Order on WhatsApp</a>
+
+</body>
+</html>
