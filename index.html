@@ -311,5 +311,42 @@ footer {
 </footer>
 <a class="whatsapp" href="https://wa.me/918197409509">Order on WhatsApp</a>
 
+  <script>
+function updateOpenStatus() {
+    const now = new Date();
+    const day = now.getDay(); // 0 = Sunday
+    const hour = now.getHours();
+    const minutes = now.getMinutes();
+    const time = hour + minutes / 60;
+
+    let isOpen = false;
+
+    if (day === 0) {
+        // Sunday: 8 AM – 2 PM
+        if (time >= 8 && time < 14) isOpen = true;
+    } else {
+        // Mon–Sat: 8–1:30 & 2–6
+        if ((time >= 8 && time < 13.5) || (time >= 14 && time < 18)) {
+            isOpen = true;
+        }
+    }
+
+    const statusDiv = document.querySelector(".open-now");
+
+    if (isOpen) {
+        statusDiv.innerHTML = "🟢 OPEN NOW";
+        statusDiv.style.color = "green";
+        statusDiv.style.fontWeight = "700";
+    } else {
+        statusDiv.innerHTML = "🔴 CLOSED NOW";
+        statusDiv.style.color = "red";
+        statusDiv.style.fontWeight = "700";
+    }
+}
+
+updateOpenStatus();
+setInterval(updateOpenStatus, 60000); // update every 1 min
+</script>
+  
 </body>
 </html>
