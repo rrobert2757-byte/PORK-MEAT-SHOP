@@ -16,6 +16,48 @@ body {
   color: #222;
 }
 
+/* ⭐⭐ ADD THIS BELOW ⭐⭐ */
+
+/* Neon Hero Title */
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow:
+      0 0 5px #ff0055,
+      0 0 10px #ff0055,
+      0 0 20px #ff0055,
+      0 0 40px #ff0055,
+      0 0 80px #ff0055;
+  animation: neonPulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  0% {
+      text-shadow:
+          0 0 5px #ff0055,
+          0 0 10px #ff0055,
+          0 0 20px #ff0055,
+          0 0 40px #ff0055,
+          0 0 80px #ff0055;
+  }
+  100% {
+      text-shadow:
+          0 0 10px #ff1a75,
+          0 0 20px #ff1a75,
+          0 0 40px #ff1a75,
+          0 0 80px #ff1a75,
+          0 0 120px #ff1a75;
+  }
+}
+</style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
 /* Header */
 header {
   display: flex;
